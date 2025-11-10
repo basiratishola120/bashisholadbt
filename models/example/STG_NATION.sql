@@ -1,0 +1,4 @@
+{{config {materialized='table'}}
+WITH CTE 
+(SELECT * FROM SNOWFLAKE_SAMPLE_DATA.NATION)
+SELECT * FROM CTE
