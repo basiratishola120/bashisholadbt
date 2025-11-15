@@ -1,4 +1,5 @@
+{{config (materialized='table',transient =false)}}
 WITH CTE AS
-(select * from SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.CUSTOMER
+(select * from {{sources(SNOWFLAKE_SAMPLE_DATA.'CUSTOMER')}}
 )
 SELECT * FROM CTE

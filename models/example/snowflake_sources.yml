@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name:snowflake_sample_data
+    database:SNOWFLAKE_SAMPLE_DATA
+    schema:TPCH_SF1
+    description:"Snowflake sample TPCH dataset"
+ tables:
+ - name:CUSTOMER
+      description:"Customer data"
+       - name:REGION
+      description:"region refrence  data"
+       - name:NATION
+      description:"Nation refrence data"
+
+      -names:LINEITEM
+      descriprition:"This is fact data"
