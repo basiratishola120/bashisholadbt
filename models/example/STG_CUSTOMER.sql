@@ -1,5 +1,12 @@
-{{config (materialized='table',transient =false)}}
-WITH CTE AS
-(select * from {{sources(SNOWFLAKE_SAMPLE_DATA.'CUSTOMER')}}
+{{ config(
+    materialized='table',
+    transient=false
+) }}
+
+with cte as (
+    select *
+    from {{ source('snowflake_sample_data', 'CUSTOMER') }}
 )
-SELECT * FROM CTE
+
+select *
+from cte

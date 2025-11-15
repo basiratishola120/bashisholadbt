@@ -1,8 +1,12 @@
- {{config (materialized='table',transient=false)}}
+{{ config(
+    materialized='table',
+    transient=false
+) }}
 
- WITH CTE 
- AS
-(
-    SELECT * FROM SNOWFLAKE_SAMPLE_DATA.TPCH_SF1.REGION
-    )
-SELECT * FROM CTE
+with cte as (
+    select *
+    from {{ source('snowflake_sample_data', 'REGION') }}
+)
+
+select *
+from cte
