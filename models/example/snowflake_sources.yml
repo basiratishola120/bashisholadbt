@@ -12,3 +12,6 @@ sources:
         description: "Region reference data"
       - name: NATION
         description: "Nation reference data"
+        
+      - name: LINEITEM
+        description: "This is fact data"

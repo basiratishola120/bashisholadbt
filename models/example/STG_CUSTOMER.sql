@@ -5,7 +5,7 @@
 
 with cte as (
     select *
-    from {{ source('snowflake_sample_data', 'CUSTOMER') }}
+    from {{ sources('snowflake_sample_data', 'CUSTOMER') }}
 )
 
 select *
