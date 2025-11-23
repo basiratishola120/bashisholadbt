@@ -1,5 +1,4 @@
-{{ config(materialized='table') }}
-
+{{ config(materialized='table', schema='staging') }}
 SELECT 
     CAST(order_id AS INT) AS order_id,
     CAST(customer_id AS INT) AS customer_id,
