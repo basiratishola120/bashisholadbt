@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: RAWLAYER
+    database: DBT_DB           # your Snowflake database
+    schema: RAWLAYER           # schema where 'orders' table exists
+    tables:
+      - name: CUSTOMER
+      - name: ITEM
+      
+      
+
+      
